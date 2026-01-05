@@ -3,12 +3,116 @@
 exports[`toUpperCase 1`] = `
 <DocumentFragment>
   <div
-    class="w-screen h-screen bg-neutral-950 flex items-center justify-center text-neutral-100"
+    class="w-screen h-screen bg-neutral-950 flex items-center justify-center text-neutral-100 font-family-inter"
   >
     <div
-      class="w-96 bg-neutral-800 p-4 rounded-lg"
+      class="w-[280px] bg-[#151515] p-4 space-y-4"
     >
-      // Your component go here
+      <div
+        class="w-full flex flex-col md:flex-row justify-center items-start md:items-center md:justify-between gap-2"
+      >
+        <span
+          class="inline-block min-w-[100px] shrink-0 text-xs text-[#AAAAAA] self-center"
+        >
+          Unit
+        </span>
+        <div
+          class="bg-[#212121] rounded-lg p-0.5 flex gap-x-0.5 min-w-[140px]"
+        >
+          <button
+            class="flex-1 h-8 px-4 rounded-md text-xs font-medium transition-all duration-200 bg-[#424242] text-white"
+            data-testid="segment-%"
+          >
+            %
+          </button>
+          <button
+            class="flex-1 h-8 px-4 rounded-md text-xs font-medium transition-all duration-200 bg-[#212121] text-[#AAAAAA] cursor-pointer hover:bg-[#424242] hover:text-white"
+            data-testid="segment-px"
+          >
+            px
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col md:flex-row justify-center items-start md:items-center md:justify-between gap-2"
+      >
+        <span
+          class="inline-block min-w-[100px] shrink-0 text-xs text-[#AAAAAA] self-center"
+        >
+          Value
+        </span>
+        <div
+          class="group/stepper bg-[#212121] rounded-lg flex transition-all focus-within:outline focus-within:outline-[#3C67FF] min-width-[140px]"
+          data-testid="number-stepper-wrapper"
+        >
+          <div
+            class="group inline-flex flex-col items-center relative"
+            data-testid="tooltip-wrapper"
+          >
+            <div
+              class="absolute invisible group-hover:visible transition-opacity duration-300 bottom-full mb-0.5 whitespace-nowrap z-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
+              data-testid="tooltip-label"
+            >
+              <div
+                class="bg-[#212121] text-white text-xs font-normal text-center rounded-lg py-[3px] px-2 shadow-lg"
+              >
+                Value must be greater than 0
+              </div>
+              <div
+                class="w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-[#212121]"
+              />
+            </div>
+            <button
+              class="shrink-0 h-9 w-9 flex items-center justify-center transition-colors cursor-not-allowed bg-[#212121]! rounded-tl-lg rounded-bl-lg"
+              data-testid="decrement-button"
+              disabled=""
+            >
+              <svg
+                class="fill-[#AAAAAA] fill-opacity-[0.67]"
+                fill="none"
+                height="2"
+                viewBox="0 0 12 2"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0 0.75C0 0.335786 0.335786 0 0.75 0L11.25 0C11.6642 0 12 0.335786 12 0.75C12 1.16421 11.6642 1.5 11.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <input
+            class="h-9 w-full text-center border-none outline-none text-white text-xs font-normal px-2 transition-colors bg-[#212121] hover:bg-[#3B3B3B] grow"
+            data-testid="number-input"
+            type="text"
+            value="0"
+          />
+          <div
+            class="group inline-flex flex-col items-center relative"
+            data-testid="tooltip-wrapper"
+          >
+            <button
+              class="shrink-0 h-9 w-9 flex items-center justify-center transition-colors cursor-pointer bg-[#212121] hover:bg-[#3B3B3B] group-has-[input:hover]/stepper:bg-[#3B3B3B] rounded-tr-lg rounded-br-lg"
+              data-testid="increment-button"
+            >
+              <svg
+                class="fill-[#F9F9F9]"
+                fill="none"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.75 0.75C6.75 0.335786 6.41421 0 6 0C5.58579 0 5.25 0.335786 5.25 0.75V5.25H0.75C0.335786 5.25 0 5.58579 0 6C0 6.41421 0.335786 6.75 0.75 6.75H5.25L5.25 11.25C5.25 11.6642 5.58579 12 6 12C6.41421 12 6.75 11.6642 6.75 11.25V6.75H11.25C11.6642 6.75 12 6.41421 12 6C12 5.58579 11.6642 5.25 11.25 5.25H6.75V0.75Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>
